@@ -1,11 +1,12 @@
 # psychosis-qol-thesis
-This repository contains all code used for the thesis:
+This repository contains all code developed and used for the Master’s thesis:
 
 “Predicting One-Year Follow-Up Outcomes in Patients with Psychotic Disorders.”
 
-The code implements a fully leak-free, grouped, 10×10 repeated nested cross-validation pipeline to evaluate six machine-learning models on the Altrecht PPP dataset.
-The primary target outcome is MANSA (Manchester Short Assessment of Quality of Life).
+The project investigates the prediction of one-year follow-up quality-of-life outcomes in patients with psychotic disorders using supervised machine-learning methods. All analyses are conducted on the Altrecht Psychosis Prognosis Prediction (PPP) dataset.
 
-Running the code:
-The scripts require access to the encrypted Altrecht PPP dataset.
-Because the data are confidential, they are not included in this repository.
+The code implements a fully group-aware 10×10 repeated nested GroupKFold cross-validation framework, ensuring strict separation between training, validation, and test data at the patient level. The modelling pipeline includes data preprocessing, imputation, feature selection, and hyperparameter optimisation within the inner cross-validation loops. Multiple machine-learning models are evaluated and compared using out-of-sample performance metrics.
+
+The primary outcome of interest is quality of life at follow-up, measured using the Manchester Short Assessment of Quality of Life (MANSA).
+
+Running the code requires access to the encrypted Altrecht PPP dataset. Due to data confidentiality, ethical approval constraints, and privacy regulations, the dataset is not included in this repository.
